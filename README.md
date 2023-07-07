@@ -1,16 +1,28 @@
-### Hi there 👋
+# 跟我一起写区块链
 
-<!--
-**jacob-chia/jacob-chia** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+> - Repo: [https://github.com/jacob-chia/tinychain](https://github.com/jacob-chia/tinychain)
+> - Home：[https://tinychain.wiki](https://tinychain.wiki)
 
-Here are some ideas to get you started:
+## 目录
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+- [00 | 概览](https://github.com/jacob-chia/tinychain)
+- [01 | 架构设计](https://github.com/jacob-chia/tinychain/blob/main/doc/01-architecture.md)
+- [02 | 项目初始化：Pre-commit Hooks 与 Github Action](https://github.com/jacob-chia/tinychain/blob/main/doc/02-init-project.md)
+- [03 | 定义数据结构与接口](https://github.com/jacob-chia/tinychain/blob/main/doc/03-data-structure-api.md)
+- [04 | 钱包: 签名与验签](https://github.com/jacob-chia/tinychain/blob/main/doc/04-wallet.md)
+- [05 | 读取命令行与配置文件](https://github.com/jacob-chia/tinychain/blob/main/doc/05-cmd-config.md)
+- [06 | libp2p: 需求分析与封装思路](https://github.com/jacob-chia/tinychain/blob/main/doc/06-libp2p.md)
+- [07 | tinyp2p：基于 CSP 的无锁并发模型](https://github.com/jacob-chia/tinychain/blob/main/doc/07-tinyp2p.md)
+- [08 | 网络层](https://github.com/jacob-chia/tinychain/blob/main/doc/08-network.md)
+- [09 | 业务层：在业务层如何做读写分离？](https://github.com/jacob-chia/tinychain/blob/main/doc/09-biz.md)
+- [10 | 存储层、功能演示](https://github.com/jacob-chia/tinychain/blob/main/doc/10-data.md)
+
+## 项目简介
+
+本项目旨在通过一个`分布式账本`来演示区块链的基本原理，主要功能包括：
+
+- 通过 `HTTP JSON API` 向用户提供`转账`、`查询`等功能；
+- 节点之间通过 `P2P` 协议进行交互，数据通过 `protobuf` 编解码，功能包括`节点发现`、`广播交易`、`广播区块`、从最佳节点（区块高度最高的节点）`同步区块`等；
+- 共识机制采用 `POW`；
+- 使用 `sled`（纯 Rust 编写的嵌入式 KV store， 对标 RocksDB）存储状态；
+- 为了方便演示，节点提供了`钱包`的`签名/验签`功能，用户发送交易时无需对交易签名，签名的动作由节点自动完成。
