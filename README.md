@@ -1,7 +1,7 @@
 # 跟我一起写区块链
 
 > - Repo: [https://github.com/jacob-chia/tinychain](https://github.com/jacob-chia/tinychain)
-> - Home：[https://tinychain.wiki](https://tinychain.wiki)
+> - Home：[https://www.tinychain.wiki/](https://www.tinychain.wiki/)
 
 ## 目录
 
